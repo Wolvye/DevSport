@@ -4,10 +4,10 @@
              x:Class="DevSport.MVVM.Views.DevSportsViews"
              Title="DevSportsViews">
     <VerticalStackLayout>
-        <Entry Placeholder="Name" />
-        <Entry Placeholder="Reps" />
-        <Entry Placeholder="Weigt" />
+        <Entry Placeholder="Name" Text="{Binding Name}"/>
+        <Entry Placeholder="Reps" Text="{Binding Repetitions}" Keyboard="Numeric"/>
+        <Entry Placeholder="Weigt" Text="{Binding Weight}"/>
         <DatePicker />
-        <Button Text="Save" />
+        <Button Text="Save" Command="{Binding SaveWorkoutCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

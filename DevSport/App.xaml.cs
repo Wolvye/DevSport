@@ -1,4 +1,7 @@
-﻿namespace DevSport
+﻿using DevSport.MVVM.ViewModels;
+using DevSport.MVVM.Views;
+
+namespace DevSport
 {
     public partial class App : Application
     {
@@ -9,7 +12,8 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            return new Window(new DevSportsViews());
         }
+
     }
 }
