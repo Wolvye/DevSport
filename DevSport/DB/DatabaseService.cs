@@ -5,30 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using SQLite;
 using DevSport.MVVM.Models;
+using System.Data.Common;
 namespace DevSport.DB
 {
     public class DatabaseService
     {
-        public async Task DBConnection()
+        private SQLiteAsyncConnection _connection;
+        public DatabaseService() //Konstruktor
         {
             var databasePath = Path.Combine(FileSystem.AppDataDirectory, "DevSport.db");
-            var db = new SQLiteAsyncConnection(databasePath);
-
-            await db.CreateTableAsync<WorkoutActivity>();
-            Console.WriteLine("Table created!");
+            _connection = new SQLiteAsyncConnection(databasePath);
+        }
+        public async Task InitializeAsync()
+        {
+            await _connection.CreateTableAsync<WorkoutActivity>();
         }
 
-        public static void AddLesson(SQLiteConnection db, string name, int rep, double weight)
+        public async Task AddLessonAsync(string name, int rep, double weight)
         {
+            
             var lesson = new WorkoutActivity()
             {
-               Name = name,
-               Repetitions = rep,
-               Weight = weight,
+                Name = name,
+                Repetitions = rep,
+                Weight = weight,
 
 
             };
-            db.Insert(lesson);
+            await _connection.InsertAsync(lesson);
             Console.WriteLine("Added", lesson.Name, lesson.Repetitions, lesson.Weight);
         }
     }
