@@ -1,49 +1,35 @@
-# DevSport – Deine persönliche Trainings- & Ernährungsapp
+Hinweis: Dieses Projekt dient nicht nur der App-Entwicklung, sondern vor allem meinem Ziel, tieferes Verständnis für moderne App-Architektur, Datenfluss und UI-Logik zu entwickeln. Ich baue DevSport bewusst mit möglichst wenigen "Stützrädern", um Konzepte wie MVVM, Datenbindung, Offline-Speicherung und UI-Design wirklich zu durchdringen. Dabei experimentiere ich viel und entwickle iterativ weiter – weniger "Copy & Paste", mehr echtes Verstehen.
 
-## 🏁 Ziel der App
+🏁 Ziel der App
+DevSport ist eine plattformübergreifende Fitness-App (iOS & Android), die dir hilft, deine Sporteinheiten, Geräte, Wiederholungen, Gewichte und Ernährung zu dokumentieren und zu analysieren – komplett offline-fähig.
 
-DevSport ist eine plattformübergreifende Fitness-App (iOS & Android), die dir hilft, deine Sporteinheiten, Geräte, Wiederholungen, Gewichte und Ernährung zu dokumentieren und zu analysieren – **komplett offline-fähig**.
+🚀 Funktionen (aktuell im Aufbau)
+🏋️‍♂️ Workout-Tracking
+Eigene Sporteinheiten erfassen (Name, Wiederholungen, Gewicht)
 
----
+Geräte auswählen (Langhantel, Klimmzugstange usw.)
 
-## 🚀 Funktionen (aktuell im Aufbau)
+Datum und Notizen speichern
 
-### 🏋️‍♂️ Workout-Tracking
-- Eigene Sporteinheiten erfassen (Name, Wiederholungen, Gewicht)
-- Geräte auswählen (Langhantel, Klimmzugstange usw.)
-- Datum und Notizen speichern
-- Kalenderintegration zur Tagesansicht
+Kalenderintegration zur Tagesansicht
 
-### 🍎 Ernährungstracking (in Planung)
-- Barcode-Scanner zur Lebensmittelerkennung
-- Manuelle Eingabe mit kcal, Makros etc.
+🍎 Ernährungstracking (in Planung)
+Barcode-Scanner zur Lebensmittelerkennung
 
-### 🍲 Community-Rezepte (in Planung)
-- Mini-Forum für gesunde Rezepte
-- Upload & Like-System
+Manuelle Eingabe mit kcal, Makros etc.
 
----
+🍲 Community-Rezepte (in Planung)
+Mini-Forum für gesunde Rezepte
 
-## ⚙️ Technologiestack
+Upload & Like-System
 
-- **.NET MAUI** für Cross-Plattform-App
-- **SQLite (sqlite-net-pcl)** für lokale Datenspeicherung
-- **MVVM Architektur**
-- **Fody** für automatisches `INotifyPropertyChanged`
-- **XAML + Binding** für modernes UI
+⚙️ Technologiestack
+.NET MAUI für Cross-Plattform-App
 
----
+SQLite (sqlite-net-pcl) für lokale Datenspeicherung
 
-## 🔄 Aktueller Stand
+MVVM Architektur
 
-- Datenmodell (`WorkoutActivity`) fertig
-- SQLite-Anbindung mit `DatabaseService`
-- ViewModel wird aktuell aufgebaut
-- UI folgt Schritt für Schritt
+Fody für automatisches INotifyPropertyChanged
 
----
-
-## ✅ Ziel
-
-Am Ende entsteht eine funktionale, speicherfähige App mit professioneller Architektur, die du im App Store und Play Store veröffentlichen kannst – oder als starkes Portfolio-Projekt nutzt.
-
+XAML + Binding für modernes UI
